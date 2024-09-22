@@ -105,6 +105,26 @@ ul li:last-child {
     gap: 20px;
 }
 
+/* Estilo para los items de la lista */
+.gasto-item {
+    display: flex;
+    justify-content: space-between;  /* Alinea el contenido a los lados opuestos */
+    align-items: center;             /* Alinea verticalmente los elementos */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;   /* Línea de separación entre elementos */
+}
+
+/* Flexbox para el texto del gasto */
+.gasto-info {
+    flex-grow: 1;                    /* El contenido del gasto ocupa el espacio disponible */
+    margin-right: 10px;              /* Separación entre el texto y los botones */
+}
+
+/* Estilo para los botones */
+.gasto-buttons button {
+    margin-left: 5px;                /* Espacio entre los botones */
+}
+
 .total {
     margin-top: 20px;
     font-size: 24px;
