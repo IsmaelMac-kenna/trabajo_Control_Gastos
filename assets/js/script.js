@@ -45,14 +45,18 @@ function actualizarListaGastos(){
             alert('¡Se ha registrado un gasto mayor a 150 dólares!')
         }
         //ESTA SERIA LA NUEVA FUNCION
-        htmlLista += `<li id="gasto-${posicion}">
-                <span id="nombre-${posicion}">${elemento}</span> - 
-                USD <span id="valor-${posicion}">${valorGasto.toFixed(2)}</span> - 
-                <span id="descripcion-${posicion}">${listaDescripcionesGastos[posicion]}</span>
-                <button onclick="eliminarGasto(${posicion});">Eliminar</button>
-                <button onclick="editarGasto(${posicion});" id="botonEditar-${posicion}">Modificar</button>
-                <button onclick="guardarGasto(${posicion});" id="botonGuardar-${posicion}" style="display:none;">Guardar</button>
-            </li>`;
+        htmlLista += `<li class="gasto-item" id="gasto-${posicion}">
+        <div class="gasto-info">
+            <span id="nombre-${posicion}">${elemento}</span> - 
+            USD <span id="valor-${posicion}">${valorGasto.toFixed(2)}</span> - 
+            <span id="descripcion-${posicion}">${listaDescripcionesGastos[posicion]}</span>
+        </div>
+        <div class="gasto-buttons">
+            <button onclick="eliminarGasto(${posicion});">Eliminar</button>
+            <button onclick="editarGasto(${posicion});" id="botonEditar-${posicion}">Modificar</button>
+            <button onclick="guardarGasto(${posicion});" id="botonGuardar-${posicion}" style="display:none;">Guardar</button>
+        </div>
+    </li>`;
         //htmlLista += `<li>${elemento} - USD ${valorGasto.toFixed(2)}
         //    <button onclick="eliminarGasto(${posicion});">Eliminar</button>
         //            </li>`;
